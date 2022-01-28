@@ -6,8 +6,7 @@
 // OK -Listar participantes e palestrantes por evento.
  
 // OK -Enquanto a quantidade de participantes for inferior a 100, permitir cadastro; senão, alertar que o cadastro não será permitido por ter excedido o limite.
-
-let validDateForEvent = new Date(); // Variável que irá coletar a data atual.
+let validDateForEvent = new Date(new Date()-3600*1000*3); // Variável que irá coletar a data atual.
 
 let registerEventData = new Date('01/28/2022');
 let idadeDoParticipante = 19;
@@ -35,4 +34,4 @@ let speakersOfEvent = ["Dra. Margie Simpson", "Dr. Bart Simpson", "Dr. Hommer Si
 
     } else {
         console.log(`O evento não pode ser cadastrado no dia ${registerEventData.toLocaleDateString('pt-BR', { timeZone: 'UTC' })} as datas devem ser posteriores ao dia de hoje.`);
-    }
+}
